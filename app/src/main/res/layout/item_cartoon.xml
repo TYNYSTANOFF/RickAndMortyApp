@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/grey"
+    android:layout_marginBottom="8dp"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:background="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:paddingTop="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Name"
+        android:textColor="@color/orange"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/iv_avatar"
+        app:layout_constraintTop_toTopOf="@id/iv_avatar" />
+
+    <ImageView
+        android:id="@+id/iv_alive_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/ic_alive_status"
+        app:tint="@color/green"
+        app:layout_constraintStart_toEndOf="@id/iv_avatar"
+        app:layout_constraintTop_toBottomOf="@id/tv_name" />
+
+    <TextView
+        android:id="@+id/tv_status_and_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="Alive - Human"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@id/iv_alive_status"
+        app:layout_constraintTop_toTopOf="@id/iv_alive_status"
+        app:layout_constraintBottom_toBottomOf="@id/iv_alive_status" />
+
+    <TextView
+        android:id="@+id/tv_desc_lkl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="Last known location"
+        android:textColor="@color/light_grey"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@id/iv_avatar"
+        app:layout_constraintTop_toBottomOf="@id/iv_alive_status"/>
+
+    <TextView
+        android:id="@+id/tv_last_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Last Location"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/iv_avatar"
+        app:layout_constraintTop_toBottomOf="@id/tv_desc_lkl" />
+
+    <TextView
+        android:id="@+id/tv_desc_fsi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="First seen in:"
+        android:textColor="@color/light_grey"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@id/iv_avatar"
+        app:layout_constraintTop_toBottomOf="@id/tv_last_location"/>
+
+    <TextView
+        android:id="@+id/tv_first_seen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Last Location"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/iv_avatar"
+        app:layout_constraintTop_toBottomOf="@id/tv_desc_fsi" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
