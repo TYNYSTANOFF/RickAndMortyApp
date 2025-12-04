@@ -1,9 +1,8 @@
 package com.example.rickandmortyapp
 
 import android.app.Application
-import com.example.rickandmortyapp.di.modules.countDataModule
-import com.example.rickandmortyapp.di.modules.countDomainModule
-import com.example.rickandmortyapp.di.modules.countUIModule
+import com.example.rickandmortyapp.di.modules.cartoonDomainModule
+import com.example.rickandmortyapp.di.modules.cartoonUIModule
 import com.example.rickandmortyapp.di.modules.networkModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -15,7 +14,7 @@ class CartoonApplication: Application() {
         startKoin {
             androidLogger()
             androidContext(this@CartoonApplication)
-            modules(countDataModule, countDomainModule, countUIModule, networkModule)
+            modules(networkModule, cartoonDomainModule, cartoonUIModule)
         }
     }
 }

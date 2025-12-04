@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:background="@color/grey"
     android:layout_marginBottom="8dp"
+    android:id="@+id/cc_container"
     android:layout_height="wrap_content">
 
     <ImageView
@@ -81,7 +82,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
-        android:text="First seen in:"
+        android:text="Origin location:"
         android:textColor="@color/light_grey"
         android:textSize="12sp"
         app:layout_constraintStart_toEndOf="@id/iv_avatar"

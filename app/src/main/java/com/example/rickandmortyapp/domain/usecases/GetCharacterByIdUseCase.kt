@@ -5,10 +5,10 @@ import com.example.rickandmortyapp.domain.models.Character
 import com.example.rickandmortyapp.domain.repository.CartoonRepository
 import kotlinx.coroutines.flow.Flow
 
-class GetCharactersUseCase(
+class GetCharacterByIdUseCase(
     private val repository: CartoonRepository
 ) {
-    fun getCharacters(): Flow<Either<String, List<Character>>>
-    = repository.getCharacters()
+    fun getCharacterById(id : Int?): Flow<Either<String, Character>>
+    = repository.getCharacterById(id)
 
 }
