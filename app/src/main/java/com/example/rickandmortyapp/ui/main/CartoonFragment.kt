@@ -46,7 +46,6 @@ class CartoonFragment : BaseFragment() {
         Toast.makeText(requireActivity(), "это фрагмент", Toast.LENGTH_SHORT).show()
         collectData()
         initAdapter()
-        viewModel.getCharacters()
     }
 
     private fun initAdapter() {
@@ -59,19 +58,15 @@ class CartoonFragment : BaseFragment() {
     }
 
     private fun collectData() {
-        viewModel.charactersState.handleState(
-            onSuccess = { data ->
-                displayResult(data) },
-            onLoading = { isLoading ->
-                binding.progressBar.isVisible = isLoading
+        lifecycleScope.launch {
+            repeatOnLifecycle(state = Lifecycle.State.STARTED){
+                viewModel.charactersState.collect{ data ->
+                    adapter.submitData(data)
+                }
             }
-        )
+        }
     }
 
-
-    private fun displayResult(data: List<Character>) {
-        adapter.submitList(data)
-    }
 
     private fun openDetailFragment(id: Int) {
         val fragment = DetailFragment()

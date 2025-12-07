@@ -17,7 +17,7 @@ abstract class BaseRepository {
         result: (T) -> D
       ): Flow<Either<String, D>> {
            return flow {
-            delay(1000)
+//            delay(1000)
             try {
                 val response = request()
                 if (response.isSuccessful && response.body() != null) {

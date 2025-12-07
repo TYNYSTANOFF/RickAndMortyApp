@@ -62,12 +62,11 @@ dependencies {
     //OkHttp
     implementation(libs.okhttp.logging)
 
-    //Glide
-    implementation("com.github.bumptech.glide:glide:5.0.4")
-
     //Coil
     implementation(libs.coil)
     implementation(libs.coil.compose)
     implementation(libs.coil.network)
+
+    implementation("androidx.paging:paging-runtime:3.1.1")
 
 }

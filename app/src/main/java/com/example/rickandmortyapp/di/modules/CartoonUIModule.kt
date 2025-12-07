@@ -9,7 +9,7 @@ import org.koin.dsl.module
 val cartoonUIModule = module {
     viewModel {
         CartoonViewModel(
-            getCharactersUseCase = get()
+            repository = get()
         )
 
     }

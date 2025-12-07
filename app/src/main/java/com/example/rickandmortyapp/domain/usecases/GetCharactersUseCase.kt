@@ -8,7 +8,7 @@ import kotlinx.coroutines.flow.Flow
 class GetCharactersUseCase(
     private val repository: CartoonRepository
 ) {
-    fun getCharacters(): Flow<Either<String, List<Character>>>
-    = repository.getCharacters()
+//    fun getCharacters(): Flow<Either<String, List<Character>>>
+//    = repository.getCharacters()
 
 }
